@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.4); /* Inicialmente totalmente transparente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    height: 9rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    z-index: 2;
+    margin-right: 10%;
+}
+
+.logotop {
+    margin-left: 10%;
+}
+
+.logotop img {
+    width: 14rem;
+    height: 6rem;
+}
+
+.nav-link {
+    transition: 0.7s ease-in-out;
+    font-size: 1.2rem;
+    color: aliceblue;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: rgb(0, 94, 255);
+}
+
+.Hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: rgb(22, 30, 36);
+}
+
+.slider-container {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.dots {
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.dot {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #0800fb75;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.dot.active {
+    width: 45px;
+    border-radius: 1rem;
+    background-color: rgb(36, 36, 225);
+    border: 2px aqua solid;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-buttons button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    transition: 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.centTxt{
+    position: absolute; 
+    top: 50%; 
+    left: 30%; 
+    transform: translate(-50%, -50%); 
+    width: 35rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);;
+    border-radius: 1rem;
+    z-index: 2; 
+    transition: 0.5s ease-in;
+}
+
+.centTxt .name{
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.centTxt ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.centTxt li{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    color: aliceblue;
+}
+
+.centTxt span{
+    margin-right: 8px;
+}
+
+.centTxt .tipos{
+    font-weight: 100;
+}
+
+.CentLink a{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #e0bd40;
+    color: aliceblue;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.CentLink a:hover{
+    background-color: rgba(240, 248, 255, 0.344);
+    color: #e0bd40;
+    scale: 1.2;
+}
+
+
+
+@media (max-width: 768px) {
+    .Hamburguer {
+        display: block;
+    }
+
+    .Hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .Hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .Hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navmenu {
+        position: absolute;
+        right: -100%;
+        top: 110px;
+        gap: 0;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin-right: 0;
+        display: none;
+    }
+
+    .navmenu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .navmenu.active {
+        right: 0;
+    }
+}

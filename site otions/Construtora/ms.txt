@@ -1,0 +1,38 @@
+<header>
+        <nav>
+            <div class="navbar">
+                <div class="logotop"><a href=""><img src="src/Imgs/letra.png" alt="logo top"></a></div>
+                <ul class="navmenu">
+                    <li class="nav-item"><a href="" class="nav-link">Empreendimentos</a></li>
+                    <li class="nav-item"><a href="https://maps.app.goo.gl/zySE8zs6KVkx35Q48" class="nav-link">Endereço</a></li>
+                    <li class="nav-item"><a href="serviços/serv.html" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="promo/indexpromo.html" class="nav-link">Promoções</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="Hamburguer"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slider-container">
+        <div class="slider" id="slider1">
+            <div class="slides">
+                <div class="slide"><img src="src/Imgs/pred1.jpg" alt="Imagem 1-1">
+                
+                </div>
+                <div class="slide"><img src="src/Imgs/pred2.jpeg" alt="Imagem 1-2"></div>
+                <div class="slide"><img src="src/Imgs/pred3jpg" alt="Imagem 1-3"></div>
+            </div>
+            <div class="nav-buttons">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+            <div class="dots">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </div>
+
+    <h1>Olá</h1>

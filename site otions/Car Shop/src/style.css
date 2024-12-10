@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    font-family: "Open Sans", sans-serif;
+}
+header{
+    background-color: aliceblue;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    z-index: 2;
+    margin-right: 10%;
+}
+
+.logotop{
+    margin-left: 10%;
+}
+
+.logotop img{
+    width: 18rem;
+    height: 12rem;
+}
+
+.nav-link{
+    transition: 0.7s ease-in-out;
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+
+.Hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: aliceblue;
+}
+
+.slider-container {
+    width: 80%;
+    max-width: 30rem;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1rem;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px; /* Adjust the position from the bottom */
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensure dots are above the slide */
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fb000075;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.dot.active {
+    transition: 0.5;
+    width: 30px;
+    border-radius: 1rem;
+    background-color: #ff0099;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-buttons button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover{
+    transition: 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.slider-container {
+    width: 80%;
+    max-width: 30rem;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1rem;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px; /* Adjust the position from the bottom */
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensure dots are above the slide */
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fb000075;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.dot.active {
+    transition: 0.5;
+    width: 30px;
+    border-radius: 1rem;
+    background-color: #ff0099;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-buttons button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover{
+    transition: 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.suite1, .suite2, .suite3{
+    display: flex;
+    flex-direction: row;
+    width: 70rem;
+    height: 30rem;
+    background: rgba(100, 95, 95, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+@media(max-width:768px){
+    .Hamburguer{
+        display: block;
+    }
+
+    .Hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+
+    }
+
+    .Hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+
+    }
+    
+    .Hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+
+    }
+
+    .navmenu{
+        position: absolute;
+        right: -100%;
+        top: 110px;
+        gap: 0;
+        flex-direction: column;
+        background: rgba(70, 69, 69, 0.864);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin-right: 0;
+        display: none;
+
+    }
+
+    .navmenu.active{
+        display: flex;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .navmenu.active{
+        right: 0;
+    }
+}
